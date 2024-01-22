@@ -4,6 +4,7 @@ import { createBrowserRouter } from "react-router-dom";
 import RootLayout from "./app/RootLayout";
 import PublicLayout from "./app/public/PublicLayout";
 import AuthLayout from "./app/auth/AuthLayout";
+import PrivateLayout from "./app/private/PrivateLayout"
 
 
 
@@ -12,10 +13,12 @@ import AuthLayout from "./app/auth/AuthLayout";
 import Home from './app/public/Home'
 import Contact from "./app/public/Contact";
 import About from "./app/public/About";
-import YourProducts from "./app/public/YourProducts";
 import Menu from "./app/public/Menu";
 import LoginPage from "./app/auth/LoginPage";
 import RegisterPage from "./app/auth/RegisterPage";
+import PrivatePage from "./app/private/PrivatePage";
+
+
 
 export const router = createBrowserRouter([
     {
@@ -39,17 +42,9 @@ export const router = createBrowserRouter([
                         element: <About />
                     },
                     {
-                        path: 'products',
-                        element: <YourProducts />
-                    },
-                    {
                         path: 'menu',
                         element: <Menu />
-                    }
-
-
-
-
+                    },
                 ]
             },
             {
@@ -67,19 +62,19 @@ export const router = createBrowserRouter([
                     }
                 ]
                 
-            }
-            // {
-            //     path:"private",
-            //     element: <PrivateLayout />,
-            //     children: [
-            //         {
-            //             index: true,
-            //             element: <PrivateLayout />
-            //         }
+            },
+            {
+                path:"private",
+                element: <PrivateLayout />,
+                children: [
+                    {
+                        index: true,
+                        element: <PrivatePage />
+                    },
 
                     
-            //     ]
-            // }
+                ]
+            }
 
 
         ]

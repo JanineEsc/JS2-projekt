@@ -1,16 +1,17 @@
 import Card from "../../components/Card"
+import LoginForm from "../../components/LoginForm"
 
 function LoginPage() {
   return (
-    <div className="login-container">
-      <h1>Log in </h1>
-      <div className="login-card">
-
-      </div>
-       
-      <Card />
-    
+    <div>
+      <Card>
+        <LoginForm />
+      </Card>
     </div>
   )
 }
 export default LoginPage
+    
+    
+
+      
