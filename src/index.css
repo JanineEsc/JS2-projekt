@@ -1,0 +1,221 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Fax';
+}
+/* ------------------ Header -------------------- */
+.header-container {
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: rgb(128, 128, 122);
+}
+.header-container h1 {
+    /* border: 2px solid red; */
+    font-size: 5rem;
+    color: white;
+}
+.search-container ul {
+    /* border: 2px solid green; */
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: stretch;
+    height: 2rem;
+    margin: 0.5rem;
+    margin-top: 2rem;
+    list-style: none;
+    font-size: 1,5rem;
+    font-weight: bold;
+    
+}
+ul a:link {
+    text-decoration: none;
+}
+.search-form {
+    padding: 0.5rem;
+    width: 20vw;
+    border-radius: 10px;
+}
+
+
+  
+    
+
+/* ----------------Navbar------------------ */
+
+.nav-container {
+    /* border: 2px solid red; */
+    padding: 2rem;
+
+}
+hr {
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+.nav-card {
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+}
+.nav-card ul  {
+    display: flex;
+    list-style: none;
+    padding: 1rem;
+    gap: 2rem;
+    font-weight: bold;
+
+}
+
+.nav-card a:link {
+    text-decoration: none;
+    color: black;
+    
+}
+a:visited  {
+    color: black;
+}
+
+
+
+/* ---------------------Image container------------------ */
+.image-container {
+    display: grid;
+    justify-content: center;
+    /* border: 2px solid red; */
+    background-color: grey;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+    margin-right: 10vw;
+    margin-left: 10vw;
+    padding: 2rem;
+    height: 60vh;
+    box-shadow: 4px 4px 8px;
+    width: 80vw;
+}
+.image-card {
+    /* border: 2px solid purple; */
+    background-color:grey;
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 5vw;
+    display: grid;
+    place-items: center;
+    width: 70vw;
+    height: 20vh;
+}
+.image-card p {
+    margin-bottom: 2rem;
+}
+.shop-now-btn {
+    background-color: rgb(10, 3, 47);
+    width: 15vw;
+    height: 10vh;
+    border-radius: 10px;
+    font-size: 2rem;
+    color: white;
+    margin-left: 30vw;
+   
+}
+   
+/* -------------------- Main ------------------- */
+.main-container {
+    border: 2px solid black;
+
+}
+
+
+/* ----------------- Footer ------------------ */
+.container-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
+    gap: 2rem;
+    margin-top: 50vh;
+    border-top: 1px solid black;
+    padding: 1rem;
+    margin-left: 20vw;
+    margin-right: 20vw;
+}
+.box p {
+    font-weight: bold;
+}
+
+.box ul {
+    /* border: 2px solid red; */
+    list-style: none;
+    margin-top: 0.5rem;
+    
+}
+
+/* -----------------------Log In---------------- */
+.login-container h1 {
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+
+}
+/* ------------------------ Register --------------- */
+.register-container {
+    /* border: 2px solid red; */
+    background-color: rgb(184, 178, 174);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    gap: 1rem;
+    margin-left: 25vw;
+    margin-right: 25vw;
+    border-radius: 10px;
+    height: 25vw;
+    margin-top: 2rem;
+    box-shadow: 4px 4px 8px;
+    
+}
+.reg-card h1 {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.reg-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    
+}
+.reg-box input {
+    border-radius: 5px;
+    padding: .5rem;
+    width: 30vw;
+}
+.reg-btn {
+    border-radius: 5px;
+    padding: .5rem;
+    width: 30vw;
+    background-color: rgb(98, 95, 95);
+    color: white;
+    padding: 1rem;
+    
+}
+
+.reg-btn:hover {
+    background-color: rgb(184, 184, 184); /* Change to the desired gray shade */
+    transition: background-color 200ms;
+}
+   
+
+
+
+
+ 
+  
+   
+
+
+
+
+
