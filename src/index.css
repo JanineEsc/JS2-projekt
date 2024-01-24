@@ -3,7 +3,9 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Lucida Fax';
+    
 }
+
 /* ------------------ Header -------------------- */
 .header-container {
     /* border: 2px solid black; */
@@ -40,10 +42,6 @@ ul a:link {
     border-radius: 10px;
 }
 
-
-  
-    
-
 /* ----------------Navbar------------------ */
 
 .nav-container {
@@ -77,8 +75,6 @@ hr {
 a:visited  {
     color: black;
 }
-
-
 
 /* ---------------------Image container------------------ */
 .image-container {
@@ -134,7 +130,7 @@ a:visited  {
     align-items: center;
     font-size: 0.7rem;
     gap: 2rem;
-    margin-top: 50vh;
+    margin-top: 30vh;
     border-top: 1px solid black;
     padding: 1rem;
     margin-left: 20vw;
@@ -174,6 +170,7 @@ a:visited  {
     height: 25vw;
     margin-top: 2rem;
     box-shadow: 4px 4px 8px;
+    font-size: 15px;
     
 }
 .reg-card h1 {
@@ -206,7 +203,83 @@ a:visited  {
     background-color: rgb(184, 184, 184); /* Change to the desired gray shade */
     transition: background-color 200ms;
 }
+.error {
+    color: red;
+}
+.success {
+    color: green;
+}
+
+/* ------------------------ Contact Us -------------------------- */
+.contact-container {
+    /* border: 2px solid green; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vh;
+    
+}
+.contact-container h1 {
+    display: flex;
+    justify-content: center;
+    
+}
+.contact-card {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    width: 35%;
+    gap: .5rem;
+    padding: 4rem;
+    height: 80vh;
+    font-size: 15px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px;
+    background-color: rgb(182, 177, 173);
+}
+.contact-card input {
+    /* border: 2px solid blue; */
+    border-radius: 5px;
+    padding: .5rem;
+    border: 2px solid #ccc
+
+}
+.contact-card textarea {
+    padding: 4rem;
+    border-radius: 5px;
+    border: 2px solid #ccc
+}
+.contact-btn {
+    padding: .5rem;
+    border-radius: 5px;
+}
+/* -------------------- Home Page -------------------------- */
+.home-container {
+    /* border: 2px solid black; */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+}
+.home-container h1 {
+    font-size: 40px;
+
+}
+.home-card p {
+    margin-left: 10vw;
+
+}
+
+
+
    
+
+
+
+   
+
 
 
 

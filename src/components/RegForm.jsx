@@ -1,6 +1,12 @@
 import  { useFormik } from 'formik'
+import { useAuth } from '../contexts/authContext'
+import { useState } from 'react'
 
 function RegForm() {
+
+  const { register } = useAuth()
+  const [error, setError] = useState('')
+  const [success, setSuccess] = useState('')
 
   const form = useFormik ({
     initialValues: {
@@ -10,6 +16,15 @@ function RegForm() {
     },
     onSubmit: async (values) => {
       console.log(values)
+      const { error, success  } = await register (values)
+
+      if(error) {
+        setError(error)
+      }
+      if (success) {
+        setSuccess(success)
+
+      }
     }
   })
 
@@ -32,6 +47,9 @@ function RegForm() {
          <label htmlFor="repeatPassword"> Repeat Password </label>
          <input id="repeatPassword" value={form.values.repeatPassword} onChange={form.handleChange} type="text" />
         </div>
+        { error && <p className='error'> {error} </p>}
+        { success && <p className='success'> {success} </p>}
+
 
         <button className='reg-btn' type="submit"> Register </button>
 
