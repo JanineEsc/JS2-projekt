@@ -13,7 +13,6 @@ import PrivateLayout from "./app/private/PrivateLayout"
 import Home from './app/public/Home'
 import Contact from "./app/public/Contact";
 import About from "./app/public/About";
-import Menu from "./app/public/Menu";
 import LoginPage from "./app/auth/LoginPage";
 import RegisterPage from "./app/auth/RegisterPage";
 import PrivatePage from "./app/private/PrivatePage";
@@ -40,10 +39,6 @@ export const router = createBrowserRouter([
                     {
                         path:'about',
                         element: <About />
-                    },
-                    {
-                        path: 'menu',
-                        element: <Menu />
                     },
                 ]
             },
