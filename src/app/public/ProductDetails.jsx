@@ -35,6 +35,7 @@ return (
           <p>{product.name}</p>
           <p> {product.price} SEK </p>
           <p>{product.description}</p>
+        <button className="buy-btn">BUY</button>
         </div>
       </div>
     )}
