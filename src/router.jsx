@@ -16,6 +16,7 @@ import About from "./app/public/About";
 import LoginPage from "./app/auth/LoginPage";
 import RegisterPage from "./app/auth/RegisterPage";
 import PrivatePage from "./app/private/PrivatePage";
+import ProductDetails from "./app/public/ProductDetails";
 
 
 
@@ -37,9 +38,14 @@ export const router = createBrowserRouter([
                         element: <Contact />
                     },
                     {
-                        path:'about',
+                        path:"about",
                         element: <About />
                     },
+                    {
+                        path:"/details/:id",
+                        element:<ProductDetails />
+                    }
+                    
                 ]
             },
             {

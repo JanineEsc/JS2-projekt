@@ -221,31 +221,38 @@ a:visited  {
 
 /* -------------------- Home Page -------------------------- */
 .home-container {
-    /* border: 2px solid black; */
+    border: 2px solid rgb(250, 248, 248);
+    background-color: rgb(163, 159, 159);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 10vh;
+    /* margin-top: 10vh; */
+    padding: 4rem;
+    margin-left: 6vw;
+    margin-right: 2vw;
+    border-radius: 10px;
+    height: 50vh;
 }
 .home-container h1 {
     font-size: 40px;
 }
 .home-card p {
     margin-left: 10vw;
+    color: white;
 }
 .products-card {
     /* border: 2px solid black; */
     margin-top: 5rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
+    gap: 4rem;
     justify-items: center;
     align-items: center;
 }
 .product {
     /* border: 1px solid #b9b9b9; */
-    border-radius: 8px;
+    border-radius: 5px;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
@@ -253,13 +260,14 @@ a:visited  {
     font-size: bold;
     width: 75%;
     margin-left: 10vh;
-    box-shadow: 1px 2px 5px;
+    box-shadow: 1px 2px 3px;
+    text-decoration: none;
    
     
 }
 .image-container {
     width: 50%;
-    height: 200px;
+    /* height: 200px; */
     display: flex;
     align-items: center;
     /* margin-bottom: 2rem; */
@@ -272,6 +280,71 @@ a:visited  {
 
     }
 
+}
+.info-product  {
+    /* border: 2px solid red; */
+    padding: .5rem;
+   
+
+   & p, .buy-btn {
+        padding: .5rem;
+        
+    }
+}
+/* -------------------------Product Details ------------------------------ */
+.details-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+  
+
+}
+
+.images-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(153, 145, 145);
+    box-shadow: 2px 2px 5px;
+    width: fit-content;
+    border-radius: 5px;
+    padding: 3rem;
+}
+
+
+.big-image {
+    object-fit: cover;
+    width: 400px;
+    height: 100%;
+}
+
+.small-image-box {
+    /* border: 2px solid red; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    
+    & img {
+        width: 100%;
+        height: 100px;
+        object-fit: cover;
+    
+    }
+    
+}
+.details-box {
+    /* border: 2px solid orange; */
+    border-top: 2px solid rgb(50, 48, 48);
+    max-width: 500px;
+    margin: 1rem;
+
+    & p {
+       padding: 1rem;
+    }
+
+   
 }
 
 
