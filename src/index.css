@@ -10,14 +10,23 @@
 .header-container {
     /* border: 2px solid black; */
     display: flex;
-    justify-content: space-between;
     padding: 1rem;
-    background: linear-gradient(#f8f8f8, #ffffff)
+    background: linear-gradient(#1d2622, #ffffff)
 }
 .header-container h1 {
     /* border: 2px solid red; */
     font-size: 5rem;
     color:#d9b08c; 
+    padding: 1rem;
+}
+.icon-tech {
+    /* border: 2px solid red; */
+    padding: 2rem;
+    font-size: 70px;
+    color:white;
+}
+.search-container {
+    margin-left: 27vw;
 }
 .search-container ul {
     /* border: 2px solid green; */
@@ -32,6 +41,7 @@
     font-size: 1,5rem;
     font-weight: bold;
     
+    
 }
 
 ul a:link {
@@ -42,7 +52,7 @@ ul a:link {
     padding: 0.5rem;
     width: 20vw;
     border-radius: 10px;
-   
+  
 }
 
 /* ----------------Navbar------------------ */
@@ -65,7 +75,7 @@ hr {
 .nav-card ul  {
     display: flex;
     list-style: none;
-    padding: 1rem;
+    padding: 2rem;
     gap: 2rem;
     font-weight: bold;
 
@@ -78,10 +88,10 @@ hr {
 a:visited  {
     color: black;
 }
-/* -------------------- Main ------------------- */
-.main-container {
-    border: 2px solid black;
-
+.shop-cart {
+    padding: 1.5rem;
+    font-size: 33px;
+    cursor: pointer;
 }
 
 
@@ -282,15 +292,18 @@ a:visited  {
     }
 
 }
-.info-product  {
+.info-product p {
     /* border: 2px solid red; */
     padding: .5rem;
    
 
-   & p, .add-btn {
-        padding: .5rem;
-        
-    }
+}
+.add-btn {
+    background: linear-gradient(to right, #d9b08c,#8c4507);
+    padding: .5rem;
+    width: 10vw;
+    border-radius: 5px;
+    
 }
 /* -------------------------Product Details ------------------------------ */
 .details-container {

@@ -7,7 +7,7 @@ export const RegisterFormSchema = Yup.object ({
 
   email: Yup.string()
   .required('Please enter a valid email adress')
-  .min('Please enter a valid email adress'),
+  .email('Please enter a valid email adress'),
 
   message: Yup.string()
   .required('Please write something in your message!')
