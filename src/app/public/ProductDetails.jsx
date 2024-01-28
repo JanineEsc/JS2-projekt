@@ -1,11 +1,17 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import axios from "axios"
+import { useDispatch } from "react-redux"
+import { addToCart } from "../../store/features/shoppingCart/shoppingCartSlice"
 
 function ProductDetails() {
+
   const [product, setProduct] = useState(null)
   const [loading, setLoading] = useState(null)
-  const { id } = useParams()  //parameter i URL:en
+  const { id } = useParams()  
+
+  const dispatch = useDispatch ()
+
   
 
   useEffect(() => {
@@ -19,6 +25,10 @@ function ProductDetails() {
   }
   getProduct()
 }, [])
+
+const handleClick = () => {
+  dispatch(addToCart(product))
+}
 
 return (
   <div className="details-container">
@@ -35,7 +45,7 @@ return (
           <p>{product.name}</p>
           <p> {product.price} SEK </p>
           <p>{product.description}</p>
-        <button className="buy-btn">BUY</button>
+        <button onClick={handleClick} className="buy-btn"> Add to cart </button>
         </div>
       </div>
     )}

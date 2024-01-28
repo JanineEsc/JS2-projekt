@@ -22,7 +22,7 @@ export const ProductList = () => {
     <div className="products-card">
       {
         products.map(product => (
-          <Product key={product._id} product={product}  />    // _id?
+          <Product key={product._id} product={product}  />   
         ))
       }
     </div>
