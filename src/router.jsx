@@ -17,6 +17,7 @@ import LoginPage from "./app/auth/LoginPage";
 import RegisterPage from "./app/auth/RegisterPage";
 import PrivatePage from "./app/private/PrivatePage";
 import ProductDetails from "./app/public/ProductDetails";
+import CheckOut from "./app/private/CheckOut";
 
 
 
@@ -69,9 +70,13 @@ export const router = createBrowserRouter([
                 element: <PrivateLayout />,
                 children: [
                     {
-                        index: true,
+                        path: 'privatepage',
                         element: <PrivatePage />
                     },
+                    {
+                        path: "checkout",
+                        element: <CheckOut />
+                    }
 
                     
                 ]
