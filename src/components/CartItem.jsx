@@ -2,7 +2,7 @@ import { CiTrash } from "react-icons/ci";
 import { GoPlus } from "react-icons/go";
 import { BiMinus } from "react-icons/bi";
 import { useDispatch } from "react-redux";
-import { removeOne } from "../store/features/shoppingCart/shoppingCartSlice";
+import { removeOne, addOne, removeItem } from "../store/features/shoppingCart/shoppingCartSlice";
 
 
 export const CartItem = ({ item }) => {
@@ -11,7 +11,20 @@ export const CartItem = ({ item }) => {
 
   const removeOneFromCart = () => {
     dispatch(removeOne(item.product._id))
+   
   }
+
+  const addOneToCart = () => {
+    dispatch(addOne(item.product._id))
+  }
+
+  const removeItemFromCart = () => {
+    dispatch(removeItem(item.product._id))
+  }
+
+
+  
+
 
   return (
     <div className="cartitem-container">
@@ -26,9 +39,9 @@ export const CartItem = ({ item }) => {
       <div className="right"> 
         <div className="mp-btns">
           <button onClick={removeOneFromCart}  className="minus"> <BiMinus /></button>
-          <button className="plus"> <GoPlus /></button>
+          <button onClick={addOneToCart} className="plus"> <GoPlus /></button>
         </div>
-        <button className="trash-btn"><CiTrash /></button>
+        <button onClick={removeItemFromCart} className="trash-btn"><CiTrash /></button>
       </div>
     </div>
   )
