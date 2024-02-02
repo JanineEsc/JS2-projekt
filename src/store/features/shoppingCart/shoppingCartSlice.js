@@ -47,7 +47,7 @@ export const shoppingCartSlice = createSlice ({
     },
     removeItem: (state, action ) => {
       
-      state.cart = state.cart.find(item => item.product._id === action.payload)
+      state.cart = state.cart.filter(item => item.product._id !== action.payload)
 
       state.totalQuantity = getTotalQuantity(state.cart)
 
