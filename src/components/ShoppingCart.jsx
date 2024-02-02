@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 
 
-export const ShoppingCart = () => {
+export const ShoppingCart = ( { isCheckoutPage, setIsOpen }) => {
 
 const { cart, totalPrice, } = useSelector(state => state.shoppingCart)
 const dispatch = useDispatch();
@@ -16,9 +16,13 @@ useEffect(() => {
   dispatch(calcSum ());
 }, [dispatch, cart]);
 
-const clearCartFromCart= () => {
+const clearCartOfItems= () => {
   dispatch(clearCart())
 }
+
+const purchaseCompleteAlert = () => {
+  window.alert('Purchase complete');
+};
 
   return (
     <div>
@@ -39,8 +43,20 @@ const clearCartFromCart= () => {
         <small>Inkl. vat</small>
       </div>
       <div className="mp-btns">
-        <Link to="/private/checkout" className="checkout-btn"> Checkout </Link>
-        <button onClick={clearCartFromCart} className="clear-btn"> Clear Cart </button>
+        <button onClick={clearCartOfItems} className="clear-btn"> Clear Cart </button>
+        {
+          isCheckoutPage
+          && 
+          <>
+            <button onClick={() => { purchaseCompleteAlert(); clearCartOfItems(); }} className="clear-btn"> Buy</button>
+          </>
+        }
+        { 
+        !isCheckoutPage
+        && 
+        <Link onClick={() => setIsOpen(false)} to="/private/checkout" className="checkout-btn"> Checkout </Link>
+        }
+        
       </div>
       </div>
 
