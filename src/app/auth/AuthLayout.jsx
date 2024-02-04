@@ -4,12 +4,14 @@ import Navbar from "../../components/Navbar"
 import { useAuth } from "../../contexts/authContext"
 import { useEffect } from "react"
 import Footer from "../../components/Footer"
+
+
 function AuthLayout() {
 
 
-  const { token } =useAuth()
+  const { token, logout } =useAuth()
   const navigate = useNavigate()
-  
+
   useEffect (() => {
     if(token) {
       navigate("/private")

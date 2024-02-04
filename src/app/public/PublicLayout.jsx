@@ -7,13 +7,16 @@ import Footer from '../../components/Footer';
 
 function PublicLayout() {
   return (
-    <div>
+    <div className='publicLayout-container'>
       <Header />
       <Navbar />
-      <Outlet />
+      <div className='outlet-container'>
+        <Outlet />
+      </div>
       <Footer />       
     </div>
   )
 }
+
 
 export default PublicLayout

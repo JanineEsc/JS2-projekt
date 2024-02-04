@@ -7,6 +7,8 @@ import { useSelector } from 'react-redux';
 const Navbar = () => {
 
   const { totalQuantity } = useSelector(state => state.shoppingCart)
+
+  
   return (
     <div className="nav-container">
       <div className="nav-card">
@@ -22,6 +24,7 @@ const Navbar = () => {
               </div>}
           </li>
           <Dropdown />
+          <button className='logout-btn'>Log out</button>
           </div>
         <hr />
    </div>

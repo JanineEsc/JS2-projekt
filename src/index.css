@@ -11,13 +11,15 @@
     /* border: 2px solid black; */
     display: flex;
     padding: 1rem;
-    background: linear-gradient(to right,#1d2622, #116466)
+    background: linear-gradient(to right,#1d2622, #116466);
+
 }
 .header-container h1 {
     /* border: 2px solid red; */
     font-size: 5rem;
     color:#d9b08c; 
     padding: 1rem;
+    
 }
 .icon-tech {
     /* border: 1px solid #8c4507; */
@@ -26,7 +28,8 @@
     color:white;
 }
 .search-container {
-    margin-left: 27vw;
+    margin-left: 35vw;
+    margin-top: 3vh;
 }
 .search-container ul {
     /* border: 2px solid green; */
@@ -40,8 +43,6 @@
     list-style: none;
     font-size: 1,5rem;
     font-weight: bold;
-    
-    
 }
 
 ul a:link {
@@ -52,7 +53,6 @@ ul a:link {
     padding: 0.5rem;
     width: 20vw;
     border-radius: 10px;
-  
 }
 
 /* ----------------Navbar------------------ */
@@ -115,7 +115,16 @@ a:visited  {
         padding: .2rem;
     }
 } 
-
+.logout-btn {
+    margin-left: 20vw;
+    background-color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Lucida Fax';
+    font-size: 15px;
+    
+}
 
 /*  ---------------------------- DROP DOWN ----------------------- */
 .dropdown-container {
@@ -140,26 +149,15 @@ a:visited  {
     background-color: white;
   
   }
-
-  
   .dropdown-content a {
-    color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    color: white;
   }
-  
-  .dropdown-content a:hover {
-    background-color: #ddd;
-  }
-  
   .dropdown-container:hover .dropdown-content {
     display: block;
   }
-
-
-    
-
 
 
 /* --------------------- Shopping Cart ---------------------------------------- */
@@ -182,36 +180,38 @@ a:visited  {
 }
 .mp-btns {
     display: flex;
+    padding: 1rem;
+    
 }
 .checkout-btn {
     margin: .3rem;
     border-radius: 5px;
-    padding: .5rem;
     width: 5vw;
-    background-color: #ca7a35;
-    color: white;
-    border: none;
+    background-color: #e87511;
     cursor: pointer;
- 
+    border-radius: 10px;
+    font-size: 13px;
+    color: white;
 }
-.checkout-btn:hover {
+/* .checkout-btn:hover {
     transition: 5ms;
-    color: black;
+    color: rgb(239, 239, 239);
     
-}
+} */
 .clear-btn {
     margin: .3rem;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: .5rem;
     width: 5vw;
-    background-color: #ca7a35;
-    color: white;
+    background-color: #e87511;
+    /* color: white; */
     border: none;
     cursor: pointer;
+    color: white;
  
 }
 .clear-btn:hover {
-    color: black;
+    color: rgb(255, 255, 255);
     transition: 5ms;
 
 }
@@ -272,6 +272,18 @@ a:visited  {
     background-color: white;
     cursor: pointer;
     padding: 10px;
+}
+
+/* PublicLayout  */
+ 
+.publicLayout-container {
+    display: flex;
+    flex-direction:column;
+    min-height: 100vh;
+}
+
+.outlet-container {
+    flex-grow: 1;
 }
 
 /* ----------------- Footer ------------------ */
@@ -366,12 +378,10 @@ a:visited  {
 /* ------------------------ Contact Us -------------------------- */
 .contact-container {
     /* border: 2px solid green; */
-
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 10vh;
-    
 }
 .contact-container h1 {
     display: flex;
@@ -390,7 +400,8 @@ a:visited  {
     font-size: 15px;
     border-radius: 10px;
     box-shadow: 4px 4px 8px;
-    background-color: rgb(182, 177, 173);
+    background: linear-gradient(to left, #116466, #093131);
+    color: white;
 }
 .contact-card input {
     /* border: 2px solid blue; */
@@ -412,26 +423,42 @@ a:visited  {
 
 /* -------------------- Home Page -------------------------- */
 .home-container {
-    border: 2px solid rgb(250, 248, 248);
-    background: linear-gradient(#2c3531, #116466);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* margin-top: 10vh; */
     padding: 4rem;
-    margin-left: 6vw;
-    margin-right: 2vw;
+    padding-top: 0;
     border-radius: 10px;
-    height: 50vh;
+}
+.overlay-video {
+    object-fit: cover;
+    height: 400px;
+    width: 100%;
 }
 .home-container h1 {
+    position: absolute;
     font-size: 40px;
-    color:#d9b08c; 
-}
-.home-card p {
-    margin-left: 10vw;
     color: white;
+    z-index: 20;
+    color:#d9b08c;
+}
+.home-container p {
+    position: absolute; 
+    left: 45%;
+    color: white;
+    top: 57%;
+    padding-top: 15vh;
+   
+}
+/* -------------------------Product Details ------------------------------ */
+.details-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    
+    
 }
 .products-card {
     /* border: 2px solid black; */
@@ -441,6 +468,12 @@ a:visited  {
     gap: 4rem;
     justify-items: center;
     align-items: center;
+    
+}
+.product-card a:link  {
+    text-decoration: none;
+    color: black;
+    
 }
 .product {
     /* border: 1px solid #b9b9b9; */
@@ -454,7 +487,7 @@ a:visited  {
     margin-left: 10vh;
     box-shadow: 1px 2px 3px;
     text-decoration: none;
-   
+        
     
 }
 .image-container {
@@ -476,26 +509,19 @@ a:visited  {
 .info-product p {
     /* border: 2px solid red; */
     padding: .5rem;
-   
+    
 
 }
-.add-btn {
-    background: linear-gradient(to right, #d9b08c,#8c4507);
+.more-btn {
+    background: linear-gradient(to left, #2c3531,#116466);
     padding: .5rem;
-    width: 10vw;
+    width: 8vw;
     border-radius: 5px;
     cursor: pointer;
+    color:white;
     
 }
-/* -------------------------Product Details ------------------------------ */
-.details-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 3rem;
-  
 
-}
 
 .images-box {
     display: flex;
@@ -548,27 +574,66 @@ a:visited  {
         cursor: pointer;
     }
 }
-
+.buy-btn {
+    background: linear-gradient(to left, #2c3531,#116466);
+}
 /* --------------Checkout--------------------------------- */
 .checkout-container {
-    border: 2px solid green;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 2rem;
 
 }
 .checkout-card {
-    border: 2px solid red;
+    border: 2px solid #1d2622;
     display: flex;
+    flex-direction: column;
     margin: 1rem;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px;
+    
 }
-.checkout-card h1 {
-    font-size: ;
+
+/* ----------------------------- Categories ------------------------ */
+.categories-container {
+    /* border: 2px solid  #093131; */
+    margin-right: 3vw;
+    margin-left: 3vw;
+    display: flex;
+    justify-content: center;
+    /* padding: 2rem; */
+    padding: 0;
+    border-radius: 10px;
+   
 }
-
-
-
-
+.categories-container h1 {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+.categories-card {
+    /* border: 2px solid orange; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 45vw;
+}
+.categories-products{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+}
+.category-btn {
+    font-size: 20px;
+    border: none;
+    background-color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+   
+   
 
 
  

@@ -7,12 +7,10 @@ import video from "../../images/video.mp4"
 
 
 
+
 function Home() {
   
   const dispatch = useDispatch() 
-
-
-
 
   useEffect(() => {
     dispatch(getProducts())
@@ -26,19 +24,17 @@ function Home() {
       <p> { error }</p> 
     </div>
   )
-  
-
 
   return (
     <>
       <div className="home-container">
         <video className="overlay-video" autoPlay loop muted >
-        <source src={video} type="video/mp4" />
+         <source src={video} type="video/mp4" />
         </video>
           <h1>SAMSONS TECHNOLOGY</h1>
           <p> -  Where Vision Meets Precision in Every Product </p>
-        </div>
-        <ProductList />
+      </div>
+      <ProductList />
     </>
   )
 }

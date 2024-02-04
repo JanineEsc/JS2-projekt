@@ -10,7 +10,7 @@ const AuthContextProvider = ({ children }) => {
   useEffect(() => {
     if (token) return
     
-    const localToken = localStorage.getItem('accessstoken')
+    const localToken = localStorage.getItem('accesstoken')
 
     if(localToken !== null) {
       setToken(localToken)
@@ -20,7 +20,7 @@ const AuthContextProvider = ({ children }) => {
   useEffect(() => {
     if(token)  localStorage.setItem('accesstoken', token)
   }, [token])
-    
+  
 
 
 

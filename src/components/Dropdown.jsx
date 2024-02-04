@@ -17,7 +17,7 @@ return (
         </button>
       {isOpen && (
         <div className="dropdown-content">
-          <ShoppingCart />
+          <ShoppingCart setIsOpen={setIsOpen}/>
         </div>
       )}
     </div>

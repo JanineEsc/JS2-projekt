@@ -45,7 +45,7 @@ return (
           <p>{product.name}</p>
           <p> {product.price} SEK </p>
           <p>{product.description}</p>
-        <button onClick={handleClick} className="buy-btn"> Add to cart </button>
+        <button onClick={handleClick} className="buy-btn"> Add </button>
         </div>
       </div>
     )}
