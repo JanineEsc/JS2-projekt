@@ -595,6 +595,27 @@ a:visited  {
     
 }
 
+.order-notification {
+    background-color: #e87511;
+    border: black 1px solid;
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 150px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+
+    & p {
+    background-color: #e87511; 
+    }
+}
+    
+    
+
 /* ----------------------------- Categories ------------------------ */
 .categories-container {
     /* border: 2px solid  #093131; */
