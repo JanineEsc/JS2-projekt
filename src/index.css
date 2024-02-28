@@ -6,6 +6,11 @@
     
 }
 
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* ------------------ Header -------------------- */
 .header-container {
     /* border: 2px solid black; */
@@ -470,10 +475,9 @@ a:visited  {
     align-items: center;
     
 }
-.product-card a:link  {
+.product-card a:link, a:visited {
     text-decoration: none;
     color: black;
-    
 }
 .product {
     /* border: 1px solid #b9b9b9; */
@@ -487,9 +491,9 @@ a:visited  {
     margin-left: 10vh;
     box-shadow: 1px 2px 3px;
     text-decoration: none;
-        
     
 }
+
 .image-container {
     width: 50%;
     /* height: 200px; */
