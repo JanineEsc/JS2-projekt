@@ -14,6 +14,7 @@ const { token } = useAuth();
 const { cart, totalPrice, } = useSelector(state => state.shoppingCart)
 const dispatch = useDispatch();
 const [orderNotification, setOrderNotification] = useState('')
+const [postDiv, setPostDiv] = useState(false)
 
 useEffect(() => {
   dispatch(calcSum ());
@@ -49,6 +50,7 @@ const purchaseComplete= async () => {
     setOrderNotification('Something went wrong!')
   }
   
+  setPostDiv(true)
   console.log(resData);
 }
 
@@ -89,7 +91,7 @@ const purchaseComplete= async () => {
           </div>
         </div>
       </div>
-      {isCheckoutPage &&
+      {isCheckoutPage && postDiv &&
           <div className="order-notification">  
             <p>{orderNotification}</p>
           </div>
